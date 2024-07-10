@@ -13,12 +13,12 @@ export default function Home() {
         <div className='text-center xl:text-left order-2 xl:order-none'>
           <span className='text-xl'>Software Developer</span>
           <h1 className='h1 mb-6'>
-            Hello, I'm 
+            Hello, I am
             <br/> 
             <span className='text-accent'>Rakshita</span>
           </h1>
           <p className='max-w-[500px] mb-9 text-white/80'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum nesciunt quibusdam maiores facilis veniam! Vel libero odit corrupti magni. Sed!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit Earum nesciunt quibusdam maiores facilis veniam Vel libero odit corrupti magni Sed
           </p>
           {/* butons and socials */}
           <div className='flex flex-col xl:flex-row items-center gap-8'>
