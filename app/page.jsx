@@ -18,7 +18,7 @@ export default function Home() {
             <span className='text-accent'>Rakshita</span>
           </h1>
           <p className='max-w-[500px] mb-9 text-white/80'>
-             I am making a career switch from HR recruiting to software engineering because I am deeply fascinated by it. Interacting with talented candidates sparked my curiosity, and now I'm thrilled to dive into this new journey. 
+             I am making a career switch from HR recruiting to software engineering because I am deeply fascinated by it. Interacting with talented candidates sparked my curiosity, and now I&apos;m thrilled to dive into this new journey. 
           </p>
           {/* butons and socials */}
           <div className='flex flex-col xl:flex-row items-center gap-8'>
