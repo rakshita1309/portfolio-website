@@ -1,6 +1,7 @@
 'use client';
 
 import { Description } from '@radix-ui/react-dialog';
+import { IoLogoJavascript } from "react-icons/io";
 import { 
     FaHtml5, 
     FaCss3, 
@@ -9,7 +10,7 @@ import {
     FaNodeJs
 } from 'react-icons/fa';
 
-import { SiTailwindcss}  from 'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiExpress, SiMongodb, SiMobx  }  from 'react-icons/si';
 
 import { 
     Tabs, 
@@ -55,7 +56,7 @@ const skills = {
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque tempora quaerat quod asperiores nemo minus!',
     skillList:  [
         {
-            icon: '',
+            icon: <IoLogoJavascript />,
             name: 'JavaScript'
         },
         {
@@ -63,7 +64,7 @@ const skills = {
             name: 'React.js'
         },
         {
-            icon: '',
+            icon: <SiNextdotjs />,
             name: 'Next.js'
         },
         {
@@ -71,11 +72,11 @@ const skills = {
             name: 'Node.js'
         },
         {
-            icon: '',
+            icon: <SiMongodb />,
             name: 'MongoDB'
         },
         {
-            icon: '',
+            icon: <SiExpress />,
             name: 'Express.js'
         },
         {
@@ -83,12 +84,18 @@ const skills = {
             name: 'Taiwind CSS'
         },
         {
+            icon: <SiMobx />,
+            name: 'MobX'
+        },
+        {
             icon: <FaHtml5 />,
             name: 'HTML'
-        }, {
+        }, 
+        {
             icon: <FaCss3 />,
             name: 'CSS'
         },
+      
     ]
 
 }
@@ -162,7 +169,7 @@ function Resume () {
                  value='skills'
                  className='w-full h-full'
                  >
-                    <div className='flex flex-col gap-[30px]'>
+                    <ScrollArea className='flex flex-col gap-[30px]'>
                       <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                         <h3 className='text-4xl font-bold'>
                             {skills.title}
@@ -174,11 +181,26 @@ function Resume () {
                       <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]'>
                         {skills.skillList.map((skill, index) => {
                             return(
-                                <li key={index}>{skill.name}</li>
+                                <li key={index}>
+                                    <TooltipProvider delayDuration={100}>
+                                        <Tooltip>
+                                            <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group'>
+                                                <div className='text-6xl hover:text-accent'>
+                                                    {skill.icon}
+                                                </div>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>
+                                                    {skill.name}
+                                                </p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </li>
                             )
                         })}
                       </ul>
-                    </div>
+                    </ScrollArea>
                  </TabsContent>
                  <TabsContent value='education' className='w-full'>
                     <div className='flex flex-col gap-[30px] text-center xl:text-left'>

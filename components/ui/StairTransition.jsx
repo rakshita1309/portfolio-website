@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import { AnimatePresence, delay, easeInOut } from "framer-motion";
 
-import Stairs from "./stairs";
 
 function StairTransition () {
     const pathname = usePathname();
