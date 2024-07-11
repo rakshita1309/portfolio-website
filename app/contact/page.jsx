@@ -44,25 +44,45 @@ function Contact () {
                             <h3 className='text-4xl text-accent '>
                                 let&apos;s work together
                             </h3>
-                            {/* <p className='text-white/60'>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, quidem.
-                            </p> */}
+                            <p className='text-white/60'>
+                               Contact me
+                            </p>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                                 <Input type='name' placeholder='Name'></Input>
                                 <Input type='email' placeholder='Email address'></Input>
                                 <Input type='phone' placeholder='Phone number'></Input>
                             </div>
-                            <Select>
-                                <SelectTrigger>
-                                    <SelectValue></SelectValue>
-                                </SelectTrigger>
-                            </Select>
+                            <Textarea
+                                 className='h-[200px]'
+                                 placeholder='Type your message here'
+                            />
                         </form>
                     </div>
-                    {/* <div 
-                    className='flex items-center xl:justify-end order-1 xl:order-none mb-3 xl:mb-0'
+                    <div 
+                    className=' flex flex-1 items-center xl:justify-end order-1 xl:order-none mb-3 xl:mb-0'
                     >
-                    </div> */}
+                        <ul className='flex flex-col gap-10'>
+                            {info.map((item, index) => {
+                                return(
+                                    <li 
+                                    key={index}
+                                    className='flex items-center gap-6'
+                                    >
+                                        <div 
+                                        className='w-[52px] h-[52px] xl:w-[72px] xl:h-[72px]  bg-[#27272c]  text-accent rounded-md flex items-center justify-center'
+                                        >
+                                            <div className='text-[28px]'>{item.icon}</div>
+                                        </div>
+                                         <div>
+                                            <p className='text-white/60'>{item.title}</p>
+                                            <h3 className='text-xl'>{item.description}</h3>
+                                        </div>
+                                    
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

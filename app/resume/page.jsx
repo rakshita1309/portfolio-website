@@ -52,7 +52,7 @@ const about = {
 };
 
 const skills = {
-    title: 'My skills',
+    title: 'My Skills',
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque tempora quaerat quod asperiores nemo minus!',
     skillList:  [
         {
@@ -102,7 +102,7 @@ const skills = {
 
 const experience = {
     icon: '',
-    title: 'My experience',
+    title: 'My Experience',
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque tempora quaerat quod asperiores nemo minus!',
     item:[
         {
@@ -115,7 +115,7 @@ const experience = {
 
 const education = {
     icon:'',
-    title: 'My education',
+    title: 'My Education',
     description: 'bsjnskdjcnkdshnvoihsfvopwajopwihvfih',
     items: [
         {
